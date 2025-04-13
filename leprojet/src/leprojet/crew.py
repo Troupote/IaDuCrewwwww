@@ -1,5 +1,5 @@
 from crewai import Agent, Crew, Process, Task
-from crewai.project import CrewBase, agent, crew, task
+from crewai.project import CrewBase, agent, crew, task, before_kickoff, after_kickoff
 
 # If you want to run a snippet of code before or after the crew starts,
 # you can use the @before_kickoff and @after_kickoff decorators
@@ -12,6 +12,17 @@ class Leprojet():
     # Learn more about YAML configuration files here:
     # Agents: https://docs.crewai.com/concepts/agents#yaml-configuration-recommended
     # Tasks: https://docs.crewai.com/concepts/tasks#yaml-configuration-recommended
+    @before_kickoff
+    def before_kickoff_function(self, inputs):
+        print(f"Before kickoff function with inputs: {inputs}")
+        return inputs # You can return the inputs or modify them as needed
+
+    @after_kickoff
+    def after_kickoff_function(self, result):
+        print(f"After kickoff function with result: {result}")
+        return result # You can return the result or modify it as needed
+
+
     agents_config = 'config/agents.yaml'
     tasks_config = 'config/tasks.yaml'
 

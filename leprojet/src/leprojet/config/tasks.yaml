@@ -1,10 +1,22 @@
 research_task:
   description: >
-    Conduct a thorough research about {topic}
-    Make sure you find any interesting and relevant information given
-    the current year is {current_year}.
+    Conduct a thorough research about finances and the current state of the market.
+    Make sure to include the most relevant information and data for {problem}.
+    Focus on the following topics:
+    - Current trends in the financial market
+    - Key players in the market
+    - Recent developments and news
+    - Future predictions and forecasts
+    - Potential risks and challenges
+    - Opportunities for growth and investment
+    - Regulatory changes and their impact
+    - Technological advancements and their implications
+    - Global economic factors affecting the market
+    - Historical data and its relevance to current trends
   expected_output: >
-    A list with 10 bullet points of the most relevant information about {topic}
+    A list with 10 bullet points of the most relevant information about the financial market.
+    Each bullet point should be a short summary of the information found.
+
   agent: researcher
 
 reporting_task:
